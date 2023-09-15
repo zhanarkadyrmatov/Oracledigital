@@ -1,0 +1,110 @@
+.info {
+  background-image: url("../../assets/infobag.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: auto;
+  background-clip: initial;
+}
+.info_card {
+  background-image: url("../../assets/infobg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  border-radius: 50px;
+  background-color: var(--WHITE, #fff);
+  box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.1);
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.info p {
+  color: var(--DARK);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 185%;
+  margin-left: 50px;
+}
+
+.info_img {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_number {
+  margin: 0 50px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.info_number_img {
+  padding: 22px 26px;
+  background-color: #3100ff;
+  border-radius: 50%;
+}
+
+.info_nomer {
+  display: flex;
+  align-items: end;
+  gap: 30px;
+}
+.info_bold {
+  color: var(--DARK);
+  font-size: 38px;
+  font-weight: 600;
+}
+.info_nomer span {
+  color: var(--DARK);
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.5;
+}
+
+/* info_card_dark */
+
+.info_card_dark {
+  border-radius: 50px;
+  background-color: var(--GRAY);
+  box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.1);
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+.info_img_dark {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.info_number_dark {
+  margin: 0 20px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+.info_nomer_dark {
+  display: flex;
+  align-items: end;
+  gap: 30px;
+}
+
+.info_card_dark p {
+  margin: 0 50px 0 0;
+}
+
+@media only screen and (max-width: 1440px) {
+}
