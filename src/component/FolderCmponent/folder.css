@@ -1,0 +1,112 @@
+.folder {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  align-items: end;
+  margin: 160px 0;
+  position: relative;
+}
+
+/* .folder::after {
+  content: "";
+  background-image: url("../../assets/Group.png");
+  background-position-x: right;
+  position: absolute;
+  width: 492.517px;
+  height: 338.644px;
+  top: -100px;
+  right: -250px;
+  transform: rotate(30.272deg);
+} */
+.folder_left {
+  border-radius: 50px 50px 0 50px;
+  background: #d9d9d9;
+  padding: 70px;
+  position: relative;
+}
+
+.folder_left::before {
+  content: "";
+  position: absolute;
+  width: 161.214px;
+  height: 108.875px;
+  transform: rotate(44.648deg);
+  background: #d9d9d9;
+  top: 60px;
+  right: -90px;
+}
+
+.folder_left h2 {
+  color: var(--DARKs);
+  font-size: 78px;
+  font-weight: 600;
+}
+
+.folder_left_text {
+  display: inline-flex;
+  padding: 40px 50px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+  border-radius: 40px;
+  background: #5699e8;
+  margin-top: 46px;
+}
+
+.folder_left_text h3 {
+  color: #fff;
+  font-size: 78px;
+  font-weight: 600;
+}
+
+.folder_left_text p {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.folder_rigth {
+  width: 100%;
+  height: 90%;
+  background: #d9d9d9;
+  border-radius: 0 50px 50px 0px;
+  /* display: flex;
+  align-items: end; */
+  padding: 70px;
+}
+
+.folder_button {
+}
+
+.folder_slide {
+  width: 60%;
+  padding: 30px;
+  border-radius: 40px;
+  background: var(--WHITE, #fff);
+}
+
+.folder_slide h4 {
+  color: var(--DARK);
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid #737373;
+}
+
+.folder_slide p {
+  color: var(--DARK);
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.7;
+  padding: 30px 0 0;
+}
+
+.folder_people {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.folder_people_text p {
+  padding: 0;
+}

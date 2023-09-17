@@ -7,16 +7,18 @@ import OurComponent from "../component/OurComponent/OurComponent";
 import Info from "../component/InfocComponent/Info";
 import Accordion from "../component/AccordionComponent/Accordion";
 import Mentor from "../component/MentorComponent/Mentor";
+import Folder from "../component/FolderCmponent/Folder";
 function Main() {
   return (
     <div>
       <Header />
       <HeroComponent />
       <Blog />
+      {/* <OurComponent /> */}
       <Mentor />
+      <Folder />
       <Info />
       <Accordion />
-      {/* <OurComponent /> */}
       <Footer />
     </div>
   );

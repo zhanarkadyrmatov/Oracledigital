@@ -1,9 +1,9 @@
 import React from "react";
-import Info1 from "../../assets/info1.png";
+import Info1 from "../../assets/info01.png";
 import InfoLogo from "../../assets/infologo.png";
 import InfoLogo2 from "../../assets/infologo2.png";
-import Info3 from "../../assets/info3.png";
-import Info4 from "../../assets/info4.png";
+import Info3 from "../../assets/info03.png";
+import Info4 from "../../assets/info5.png";
 import Info2 from "../../assets/info2.png";
 import "./info.css";
 
