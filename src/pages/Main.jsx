@@ -16,7 +16,7 @@ function Main() {
       <Blog />
       {/* <OurComponent /> */}
       <Mentor />
-      {/* <Folder /> */}
+      <Folder />
       <Info />
       <Accordion />
       <Footer />

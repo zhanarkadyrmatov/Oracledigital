@@ -19,10 +19,6 @@ function Folder() {
             </div>
           </div>
           <div className="folder_rigth">
-            <div className="folder_button">
-              <img src={Next} alt="" />
-              <img src={Prev} alt="" />
-            </div>
             <div className="folder_wrapper">
               <div className="folder_slide">
                 <h4>5.0</h4>
@@ -46,6 +42,10 @@ function Folder() {
                 </div>
               </div>
             </div>
+            {/* <div className="folder_button">
+              <img src={Next} alt="" />
+              <img src={Prev} alt="" />
+            </div> */}
           </div>
         </div>
       </div>
