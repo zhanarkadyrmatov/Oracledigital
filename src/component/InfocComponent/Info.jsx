@@ -46,7 +46,7 @@ function Info() {
                 </div>
                 <img className="info_number_img" src={InfoLogo} alt="" />
               </div>
-              <img src={Info3} alt="" />
+              <img className="info_image" src={Info3} alt="" />
             </div>
             <p>
               В IT-сфере очень много перспективных дорожек. От создания сайтов и
@@ -63,7 +63,7 @@ function Info() {
               для того, чтобы быть успешным
             </p>
             <div className="info_img">
-              <img src={Info2} alt="" />
+              <img className="info_image" src={Info2} alt="" />
               <div className="info_number">
                 <div className="info_nomer">
                   <h6 className="info_bold">01</h6>
@@ -86,7 +86,7 @@ function Info() {
                 </div>
                 <img className="info_number_img" src={InfoLogo2} alt="" />
               </div>
-              <img src={Info4} alt="" />
+              <img className="info_image" src={Info4} alt="" />
             </div>
             <p>
               В IT-сфере очень много перспективных дорожек. От создания сайтов и

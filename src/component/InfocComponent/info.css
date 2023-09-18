@@ -1,11 +1,13 @@
 .info {
+  margin: 0px 0;
+  padding: 100px 0 0;
   background-image: url("../../assets/infobag.png");
   background-repeat: no-repeat;
+  background-size: 507px;
   background-position-x: right;
   background-position-y: top;
-  background-size: auto;
-  background-clip: initial;
 }
+
 .info_card {
   background-image: url("../../assets/infobg.png");
   background-repeat: no-repeat;
@@ -18,6 +20,7 @@
   grid-template-columns: 7fr 5fr;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   margin: 30px 0;
 }
 
@@ -27,6 +30,7 @@
   font-weight: 500;
   line-height: 185%;
   margin-left: 50px;
+  opacity: 0.8;
 }
 
 .info_img {
@@ -78,13 +82,17 @@
   grid-template-columns: 5fr 7fr;
   justify-content: center;
   align-items: center;
-  margin: 30px 0;
+  gap: 30px;
 }
 .info_img_dark {
   display: grid;
   grid-template-columns: 6fr 6fr;
   justify-content: center;
   align-items: center;
+}
+
+.info_img_dark img {
+  margin: 20px 0;
 }
 
 .info_number_dark {
@@ -101,10 +109,192 @@
   align-items: end;
   gap: 30px;
 }
+.info_nomer_dark span {
+  color: var(--DARK);
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 0.5;
+}
 
 .info_card_dark p {
   margin: 0 50px 0 0;
 }
 
 @media only screen and (max-width: 1440px) {
+  .info p {
+    font-size: 18px;
+    margin-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .info {
+    margin: 100px 0;
+  }
+  .info p {
+    font-size: 16px;
+    padding: 10px 0px 0 20px;
+    margin: 0 0 0px 0;
+  }
+  .info_card {
+    gap: 10px;
+  }
+  .info_nomer {
+    gap: 20px;
+  }
+  .info_bold {
+    font-size: 34px;
+  }
+  .info_nomer span {
+    font-size: 16px;
+  }
+  .info_image {
+    width: 223px;
+  }
+  .info_number_img {
+    padding: 18px 22px;
+    background-color: #3100ff;
+    border-radius: 50%;
+  }
+  .info_number {
+    margin: 0 50px 0 20px;
+    gap: 70px;
+  }
+
+  /*  */
+  .info_card_dark p {
+    font-size: 16px;
+    padding: 10px 20px 0 0px;
+    margin: 0 0 0px 0;
+  }
+  .info_nomer_dark span {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .info {
+    margin: 0px 0;
+    padding: 50px 0 0;
+    background-size: 407px;
+  }
+  .info_card {
+    background-image: none;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 22px;
+  }
+  .info p {
+    font-size: 14px;
+  }
+
+  .info_img {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .info_bold {
+    font-size: 34px;
+  }
+  .info_nomer span {
+    font-size: 16px;
+  }
+  .info_image {
+    width: 223px;
+  }
+  .info_number_img {
+    padding: 18px 22px;
+    background-color: #3100ff;
+    border-radius: 50%;
+  }
+  .info_number {
+    margin: 0 50px 0 20px;
+    gap: 70px;
+  }
+
+  /*  */
+  .info_card_dark p {
+    font-size: 16px;
+    padding: 10px 20px 0 0px;
+    margin: 0 0 0px 0;
+  }
+  .info_nomer_dark span {
+    font-size: 16px;
+  }
+  .info_card_dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 22px;
+    gap: 0;
+  }
+  .info_img_dark {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .info {
+    margin: 0px 0;
+    padding: 20px 0 0;
+    background-size: 207px;
+  }
+  .info {
+    margin: 40px 0;
+  }
+  .info_card {
+    margin: 20px 0;
+    border-radius: 20px;
+  }
+  .info_card_dark {
+    margin: 20px 0;
+    border-radius: 20px;
+  }
+  .info p {
+    font-size: 14px;
+    opacity: 0.8;
+    padding: 0;
+  }
+  .info_image {
+    width: 120px;
+  }
+
+  .info_bold {
+    font-size: 25px;
+  }
+  .info_nomer span {
+    font-size: 14px;
+  }
+  .info_number {
+    margin: 0 50px 0 0px;
+    gap: 20px;
+  }
+  .info_nomer {
+    gap: 16px;
+  }
+  .info_number_img {
+    padding: 5px 7px;
+    background-color: #3100ff;
+    border-radius: 50%;
+  }
+  /*  */
+  .info_nomer_dark span {
+    font-size: 14px;
+  }
+
+  .info_number_img {
+    padding: 7px 10px;
+    background-color: #3100ff;
+  }
+  .info_number_dark {
+    margin: 0 0px 0 20px;
+    gap: 20px;
+  }
 }

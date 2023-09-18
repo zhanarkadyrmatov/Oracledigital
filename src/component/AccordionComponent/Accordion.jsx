@@ -49,7 +49,7 @@ function Accordion() {
   };
   return (
     <div id="accordion">
-      <div className="container">
+      <div className="accordion_container">
         <div className="accordion">
           <h2>Часто задаваемые вопросы</h2>
           <p className="accordion_text">

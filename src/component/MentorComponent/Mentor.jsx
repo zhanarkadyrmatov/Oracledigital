@@ -80,6 +80,74 @@ function Mentor() {
               </div>
             </div>
           </div>
+          <div className="mobile">
+            <div className="mobile1">
+              <div className="mentor_mobile">
+                <div className="mobile_name">
+                  <div className="mobile_title">
+                    <h2>Jane Doe</h2>
+                    <p>UX/UI Design</p>
+                  </div>
+                  <img src={NameLogo} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="mobile2">
+              <div className="mobile_card">
+                <div className="mobile_about">
+                  <h2>Lorem</h2>
+                  <p>
+                    Chances are you will be 98% satisfied with the result/ 4.9
+                    is our average
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mobile1">
+              <div className="mentor_mobile2">
+                <div className="mobile_name">
+                  <div className="mobile_title">
+                    <h2> Alice Doe</h2>
+                    <p>Front-End Dev.</p>
+                  </div>
+                  <img src={NameLogo} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="mobile2">
+              <div className="mobile_card2">
+                <div className="mobile_about">
+                  <h2>Lorem</h2>
+                  <p>
+                    Chances are you will be 98% satisfied with the result/ 4.9
+                    is our average
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mobile1">
+              <div className="mentor_mobile3">
+                <div className="mobile_name">
+                  <div className="mobile_title">
+                    <h2> Alice Doe</h2>
+                    <p>Front-End Dev.</p>
+                  </div>
+                  <img src={NameLogo} alt="" />
+                </div>
+              </div>
+            </div>
+            <div className="mobile2">
+              <div className="mobile_card3">
+                <div className="mobile_about">
+                  <h2>Lorem</h2>
+                  <p>
+                    Chances are you will be 98% satisfied with the result/ 4.9
+                    is our average
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="mentor_text2">
             <p>
               Chances are you will be 98% satisfied with the result/ 4.9 is our
