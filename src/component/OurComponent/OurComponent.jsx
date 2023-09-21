@@ -8,47 +8,32 @@ import { Pagination, EffectCoverflow } from "swiper/modules";
 import Pyhton from "../../assets/pyhton.png";
 import Btn from "../../assets/btn-link.png";
 function OurComponent() {
-  // const swiperSlide = useSwiperSlide();
   const swiper = useRef(null);
-  // console.log(swiperSlide);
   return (
     <div className="courses">
       <div className="container">
         <h2 className="title">Наши курсы</h2>
         <Swiper
           effect={"coverflow"}
-          grabCursor={true}
           centeredSlides={true}
-          loop={true}
           slidesPerView={3}
           spaceBetween={0}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
-            depth: 20,
-            modifier: 2.5,
+            depth: 0,
+            modifier: 0,
             slideShadows: false,
-          }}
-          keyboard={{
-            enabled: true,
-          }}
-          mousewheel={{
-            thresholdDelta: 70,
           }}
           on={{
             click(event) {
               swiper.slideTo(this.clickedIndex);
             },
           }}
-          pagination={{
-            clickable: true,
-          }}
+          // pagination={{
+          //   clickable: true,
+          // }}
           breakpoints={{
-            320: {
-              coverflowEffect: {
-                stretch: 10,
-              },
-            },
             425: {
               coverflowEffect: {
                 stretch: 10,
@@ -61,19 +46,18 @@ function OurComponent() {
             },
             1024: {
               coverflowEffect: {
-                stretch: 30,
-              },
-            },
-            1440: {
-              coverflowEffect: {
-                stretch: 10,
+                stretch: 23,
               },
             },
           }}
           modules={[Pagination, EffectCoverflow]}
           className="mySwiper"
         >
-          <SwiperSlide>
+          <SwiperSlide
+            style={{
+              transform: "translate3d(0px, 0px, 0px)",
+            }}
+          >
             <div className="courses_card">
               <h2>
                 Front-End <span>(HTML, CSS, JavaScript)</span>

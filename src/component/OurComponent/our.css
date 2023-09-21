@@ -1,11 +1,8 @@
 .courses {
-  /* display: grid;
-  justify-content: center;
-  grid-template-columns: 4fr 4fr 4fr; */
-  margin: 160px 0;
+  padding: 160px 0;
 }
 .courses_card {
-  max-width: 540px;
+  width: 100%;
   border-radius: 50px;
   background: var(--WHITE, #fff);
   box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.1);
@@ -138,6 +135,9 @@
   width: 100%;
   height: 100%;
 }
+.swiper-wrapper {
+  padding: 100px 0 0;
+}
 
 .swiper-slide {
   font-size: 18px;
@@ -151,17 +151,20 @@
   position: absolute;
   content: "";
   inset: 0;
-  max-width: 540px;
+  /* width: 100%; */
   height: 100%;
   aspect-ratio: 1/1;
   border-radius: 50px;
   opacity: 0.5;
   background-color: #fff;
 }
+.swiper-slide-active {
+  bottom: 93px;
+  z-index: 12;
+}
 .swiper-slide-active::after {
   background: none;
   content: "";
-  z-index: 11;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -197,14 +200,39 @@
   .courses_card h3 {
     font-size: 22px;
   }
+
+  .courses_card h6 {
+    font-size: 15px;
+  }
+  .courses_card p {
+    font-size: 17px;
+  }
+
+  .courses_card h5 {
+    font-size: 25px;
+  }
+  .courses_card h5 span {
+    font-size: 22px;
+  }
   .swiper-slide {
     max-width: 440px;
+    border-radius: 30px;
   }
+
   .swiper-slide::after {
     max-width: 440px;
   }
 
-  .swiper-wrapper {
-    justify-content: center;
+  .courses_card button {
+    font-size: 26px;
+    padding: 0px 10px 0px 30px;
+  }
+
+  .courses_card button img {
+    padding: 8px 4px;
+    margin: 10px;
+  }
+  .swiper-slide {
+    transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
   }
 }

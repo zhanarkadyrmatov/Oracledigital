@@ -14,7 +14,7 @@ function Main() {
       <Header />
       <HeroComponent />
       <Blog />
-      {/* <OurComponent /> */}
+      <OurComponent />
       <Mentor />
       <Folder />
       <Info />

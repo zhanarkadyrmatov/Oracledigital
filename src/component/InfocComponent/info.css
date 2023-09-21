@@ -1,3 +1,14 @@
+#info {
+  position: relative;
+}
+
+#info::before {
+  content: url("../../assets/Group1.png");
+  position: absolute;
+  bottom: -190px;
+  left: 10px;
+  z-index: -1;
+}
 .info {
   margin: 0px 0;
   padding: 100px 0 0;
@@ -124,6 +135,9 @@
   .info p {
     font-size: 18px;
     margin-left: 50px;
+  }
+  #info::before {
+    content: none;
   }
 }
 

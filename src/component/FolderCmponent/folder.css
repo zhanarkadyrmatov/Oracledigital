@@ -1,25 +1,22 @@
 #folder {
   margin: 0;
+  position: relative;
 }
 .folder {
   display: grid;
   grid-template-columns: 4fr 8fr;
   align-items: end;
   margin: 160px 0 100px;
-  position: relative;
 }
 
-/* .folder::after {
-  content: "";
-  background-image: url("../../assets/Group.png");
-  background-position-x: right;
+#folder::before {
+  content: url("../../assets/Group.png");
   position: absolute;
-  width: 492.517px;
-  height: 338.644px;
-  top: -100px;
-  right: -250px;
-  transform: rotate(30.272deg);
-} */
+  top: -140px;
+  right: 25px;
+  z-index: -1;
+  /* transform: rotate(20deg); */
+}
 .folder_left {
   border-radius: 50px 50px 0 50px;
   background: #d9d9d9;
@@ -116,6 +113,11 @@
 
 .folder_people_text p {
   padding: 0;
+}
+@media only screen and (max-width: 1440px) {
+  #folder::before {
+    content: none;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
