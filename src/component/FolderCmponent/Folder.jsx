@@ -3,6 +3,7 @@ import "./folder.css";
 import People from "../../assets/people.png";
 import Next from "../../assets/next.png";
 import Prev from "../../assets/prev.png";
+
 function Folder() {
   return (
     <div id="folder">
