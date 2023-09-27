@@ -11,7 +11,7 @@ function Info() {
   return (
     <div id="info">
       <div className="container">
-        <div className="info">
+        <div data-aos="fade-down" className="info">
           <h2 className="title">
             Почему стоит задуматься о <br /> карьере в IT?
           </h2>

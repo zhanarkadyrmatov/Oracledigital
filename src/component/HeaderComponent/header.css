@@ -1,6 +1,7 @@
 #header {
   box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.5);
   background: var(--WHITE);
+  z-index: 12;
 }
 
 .header {
@@ -104,6 +105,7 @@
     border-top: 1px solid #000;
     padding: 100px 0;
     gap: 20px;
+    z-index: 120;
   }
   .header_burger_btn {
     color: var(--DARK);
@@ -114,6 +116,7 @@
     border: none;
     background: none;
     cursor: pointer;
+    display: block;
   }
 }
 

@@ -54,6 +54,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  #blog {
+    margin-bottom: 100px;
+  }
   .blog_link h3 {
     font-size: 22px;
   }
@@ -73,6 +76,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+  #blog {
+    margin-bottom: 70px;
+  }
   .blog_link h3 {
     font-size: 26px;
   }
@@ -86,6 +92,9 @@
 }
 
 @media only screen and (max-width: 425px) {
+  #blog {
+    margin-bottom: 46px;
+  }
   .blog_link h3 {
     font-size: 15px;
   }

@@ -1,8 +1,10 @@
 import React from "react";
 import Btn from "../../assets/btn-link.png";
 import "./hero.css";
+import AOS from "aos";
 
 function HeroComponent() {
+  AOS.init();
   return (
     <div id="hero">
       <div className="container">

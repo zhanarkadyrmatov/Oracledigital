@@ -3,6 +3,7 @@
   background-image: url("../../assets/bg.png");
   background-size: contain;
   background-position-x: right;
+  z-index: 0;
 }
 
 .hero {

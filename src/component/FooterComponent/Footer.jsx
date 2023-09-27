@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Btn from "../../assets/btn-link.png";
 import "./footer.css";
 import Logo from "../../assets/ORACLEDIGITAL.png";
 function Footer() {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+  const isValidEmail = (email) => {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(email);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (isValidEmail(email)) {
+      console.log({ email: email, message: message });
+      setEmail("");
+      setMessage("");
+      setIsFormSubmitted(true);
+      setTimeout(() => {
+        setIsFormSubmitted(false);
+      }, 3000);
+      return;
+    } else {
+      console.log("error?");
+    }
+  };
   return (
     <div id="footer">
       <div className="container">
@@ -15,26 +41,35 @@ function Footer() {
                 tortor ipsum sem.
               </p>
             </div>
-            <div className="footer_form_in">
+            <form onSubmit={handleSubmit} action="" className="footer_form_in">
               <div className="footer_input">
                 <input
                   className="footer_in_name"
-                  type="text"
+                  type="name"
                   placeholder="Name*"
+                  onChange={(e) => setName(e.target.value)}
+                  value={name}
                 />
-                <input type="message" placeholder="Message*" />
+                <input
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  type="message"
+                  placeholder="Message*"
+                />
               </div>
               <div className="footer_input">
                 <input
                   className="footer_in_name"
                   type="email*"
                   placeholder="Email*"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <button>
                   Отправить <img src={Btn} alt="" />
                 </button>
               </div>
-            </div>
+            </form>
           </div>
           <div className="footer_blog">
             <div className="footer_logo">

@@ -15,8 +15,8 @@
   top: -140px;
   right: 25px;
   z-index: -1;
-  /* transform: rotate(20deg); */
 }
+
 .folder_left {
   border-radius: 50px 50px 0 50px;
   background: #d9d9d9;
@@ -65,24 +65,31 @@
 }
 
 .folder_rigth {
-  width: 100%;
+  max-width: 970px;
   height: 90%;
   background: #d9d9d9;
   border-radius: 0 50px 50px 0px;
   display: flex;
-  align-items: flex-end;
-  padding: 70px 70px 70px 50px;
+  padding: 70px 70px 70px 0px;
+  position: relative;
 }
 
 .folder_button {
+  top: 78px;
+  right: 70px;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 50px;
 }
 
+.folder_button1 {
+  display: none;
+}
 .folder_slide {
-  max-width: 510px;
+  width: 510px;
+  height: 570px;
   padding: 30px;
   border-radius: 40px;
   background: var(--WHITE, #fff);
@@ -114,10 +121,32 @@
 .folder_people_text p {
   padding: 0;
 }
+.folder_button button {
+  border: none;
+  background-color: #d9d9d9;
+}
+.folder_button1 button {
+  border: none;
+  background-color: #d9d9d9;
+}
+/* .swiper-slide-next {
+  bottom: 0;
+  right: 60px;
+  z-index: -12;
+} */
 
 @media only screen and (max-width: 1440px) {
   #folder::before {
     content: none;
+  }
+  .folder_rigth {
+    max-width: 850px;
+    align-items: flex-end;
+    padding: 0px 40px 50px 40px;
+  }
+  .folder_button {
+    top: 70px;
+    right: 60px;
   }
 }
 
@@ -148,6 +177,7 @@
 
   .folder_slide {
     max-width: 430px;
+    max-height: 490px;
     padding: 20px;
   }
   .folder_slide h4 {
@@ -171,8 +201,14 @@
     padding: 0;
   }
   .folder_rigth {
-    align-items: flex-end;
-    padding: 0px 40px 50px 40px;
+    max-width: 610px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 40px 50px 100px;
+  }
+  .folder_button {
+    bottom: -500px;
+    right: 200px;
   }
 }
 
@@ -248,6 +284,7 @@
 
   .folder_slide {
     max-width: 510px;
+    max-height: 570px;
     padding: 30px;
   }
   .folder_slide h4 {
@@ -271,20 +308,39 @@
     padding: 0;
   }
   .folder_rigth {
-    width: 100%;
+    max-width: 730px;
     height: 100%;
     background: #d9d9d9;
     border-radius: 0px 0px 50px 50px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 0px 50px 30px;
+  }
+
+  .folder_button {
+    display: none;
+  }
+
+  .folder_button1 {
+    position: absolute;
+    bottom: 16px;
+    right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .folder_button1 img {
+    width: 30px;
+    height: 30px;
   }
 }
 
 @media only screen and (max-width: 425px) {
   .folder {
     margin: 40px 0;
+    justify-content: center;
   }
   .folder_left {
     border-radius: 30px 30px 0px 0px;
@@ -344,7 +400,8 @@
     font-size: 15px;
   }
   .folder_slide {
-    max-width: 316px;
+    max-width: 100%;
+    height: 100%;
     padding: 20px;
   }
   .folder_slide h4 {
@@ -373,7 +430,7 @@
     font-size: 14px;
   }
   .folder_rigth {
-    width: 100%;
+    max-width: 390px;
     height: 100%;
     border-radius: 0px 0px 30px 30px;
     padding: 0px 17px 30px;

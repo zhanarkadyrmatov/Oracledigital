@@ -1,28 +1,94 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./folder.css";
 import People from "../../assets/people.png";
 import Next from "../../assets/next.png";
 import Prev from "../../assets/prev.png";
+import { Rating } from "@mui/material";
+import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+import "swiper/css/free-mode";
 
-function Folder() {
+import {
+  Pagination,
+  Navigation,
+  FreeMode,
+  EffectCoverflow,
+} from "swiper/modules";
+
+function Slide() {
+  const swiper = useRef(null);
+
   return (
-    <div id="folder">
-      <div className="container">
-        <div className="folder">
-          <div className="folder_left">
-            <h2>Что говорят наши студенты</h2>
-            <div className="folder_left_text">
-              <h3>4.9</h3>
-              <p>
-                Chances are you will be 98% satisfied with the result/ 4.9 is
-                our average
-              </p>
-            </div>
-          </div>
-          <div className="folder_rigth">
-            <div className="folder_wrapper">
+    <>
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={false}
+        freeMode={true}
+        loop={true}
+        slidesPerView={1}
+        spaceBetween={"0"}
+        direction="horizontal"
+        speed={1000}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 0,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        // keyboard={{
+        //   enabled: true,
+        // }}
+        // mousewheel={{
+        //   thresholdDelta: 0,
+        // }}
+        initialSlide={"0"}
+        // on={{
+        //   click(event) {
+        //     swiper.slideTo(this.clickedIndex);
+        //   },
+        //   // slideChange: () => handleSlideChange(swiper.current.swiper),
+        // }}
+        navigation={{
+          prevEl: ".slider_prev",
+          nextEl: ".slider_next",
+        }}
+        breakpoints={{
+          1024: {
+            spaceBetween: 0,
+            slidesPerView: 1,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 0,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+          1440: {
+            spaceBetween: -120,
+            slidesPerView: 2,
+            coverflowEffect: {
+              rotate: 0,
+              stretch: 0,
+              depth: 0,
+              modifier: 1,
+              slideShadows: false,
+            },
+          },
+        }}
+        modules={[Navigation, EffectCoverflow]}
+      >
+        {[1, 2, 3].map((e, index) => {
+          return (
+            <SwiperSlide key={index}>
               <div className="folder_slide">
-                <h4>5.0</h4>
+                <h4>
+                  5.0 <Rating name="simple-controlled" value={5} />
+                </h4>
                 <p>
                   Eu facilisis duis pulvinar dui sapien vestibulum. Praesent sed
                   ridiculus iaculis eget egestas blandit euismod. Ligula
@@ -42,11 +108,47 @@ function Folder() {
                   </div>
                 </div>
               </div>
+            </SwiperSlide>
+          );
+        })}
+      </Swiper>
+    </>
+  );
+}
+
+function Folder() {
+  return (
+    <div id="folder">
+      <div className="container">
+        <div className="folder">
+          <div className="folder_left">
+            <h2>Что говорят наши студенты</h2>
+            <div className="folder_left_text">
+              <h3>4.9 </h3>
+              <p>
+                Chances are you will be 98% satisfied with the result/ 4.9 is
+                our average
+              </p>
             </div>
-            {/* <div className="folder_button">
-              <img src={Next} alt="" />
-              <img src={Prev} alt="" />
-            </div> */}
+            <div className="folder_button1">
+              <button className="slider_next">
+                <img src={Next} alt="" />
+              </button>
+              <button className="slider_prev">
+                <img src={Prev} alt="" />
+              </button>
+            </div>
+          </div>
+          <div className="folder_rigth">
+            <Slide />
+            <div className="folder_button">
+              <button className="slider_next">
+                <img src={Next} alt="" />
+              </button>
+              <button className="slider_prev">
+                <img src={Prev} alt="" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
