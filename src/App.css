@@ -30,6 +30,9 @@ a {
   font-weight: 600;
   margin-bottom: 40px;
 }
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
 @media only screen and (max-width: 1024px) {
   .title {
     font-size: 32px;

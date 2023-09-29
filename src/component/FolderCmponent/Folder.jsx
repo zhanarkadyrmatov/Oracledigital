@@ -4,53 +4,21 @@ import People from "../../assets/people.png";
 import Next from "../../assets/next.png";
 import Prev from "../../assets/prev.png";
 import { Rating } from "@mui/material";
-import { Swiper, SwiperSlide, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
-import "swiper/css/effect-coverflow";
-import "swiper/css/free-mode";
+import "swiper/css/navigation";
 
-import {
-  Pagination,
-  Navigation,
-  FreeMode,
-  EffectCoverflow,
-} from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 
 function Slide() {
-  const swiper = useRef(null);
-
   return (
     <>
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={false}
-        freeMode={true}
-        loop={true}
         slidesPerView={1}
-        spaceBetween={"0"}
-        direction="horizontal"
-        speed={1000}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 0,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        // keyboard={{
-        //   enabled: true,
-        // }}
-        // mousewheel={{
-        //   thresholdDelta: 0,
-        // }}
-        initialSlide={"0"}
-        // on={{
-        //   click(event) {
-        //     swiper.slideTo(this.clickedIndex);
-        //   },
-        //   // slideChange: () => handleSlideChange(swiper.current.swiper),
+        // pagination={{
+        //   clickable: true,
         // }}
         navigation={{
           prevEl: ".slider_prev",
@@ -58,31 +26,13 @@ function Slide() {
         }}
         breakpoints={{
           1024: {
-            spaceBetween: 0,
-            slidesPerView: 1,
-            coverflowEffect: {
-              rotate: 0,
-              stretch: 0,
-              depth: 0,
-              modifier: 1,
-              slideShadows: false,
-            },
-          },
-          1440: {
-            spaceBetween: -120,
             slidesPerView: 2,
-            coverflowEffect: {
-              rotate: 0,
-              stretch: 0,
-              depth: 0,
-              modifier: 1,
-              slideShadows: false,
-            },
           },
         }}
-        modules={[Navigation, EffectCoverflow]}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
       >
-        {[1, 2, 3].map((e, index) => {
+        {[1, 2, 3, 4].map((e, index) => {
           return (
             <SwiperSlide key={index}>
               <div className="folder_slide">
@@ -130,14 +80,6 @@ function Folder() {
                 our average
               </p>
             </div>
-            <div className="folder_button1">
-              <button className="slider_next">
-                <img src={Next} alt="" />
-              </button>
-              <button className="slider_prev">
-                <img src={Prev} alt="" />
-              </button>
-            </div>
           </div>
           <div className="folder_rigth">
             <Slide />
@@ -146,7 +88,11 @@ function Folder() {
                 <img src={Next} alt="" />
               </button>
               <button className="slider_prev">
-                <img src={Prev} alt="" />
+                <img
+                  style={{ transform: "rotate(180deg)" }}
+                  src={Prev}
+                  alt=""
+                />
               </button>
             </div>
           </div>
@@ -157,3 +103,27 @@ function Folder() {
 }
 
 export default Folder;
+
+{
+  /* <div className="folder_slide">
+  <h4>
+    5.0 <Rating name="simple-controlled" value={5} />
+  </h4>
+  <p>
+    Eu facilisis duis pulvinar dui sapien vestibulum. Praesent sed ridiculus
+    iaculis eget egestas blandit euismod. Ligula senectus egestas cras risus
+    sodales commodo. Enim nec neque sodales quis sit massa posuere. Id eget
+    ultrices tempus sit id donec feugiat. Congue aliquet tristique egestas
+    dictum tincidunt ac. Odio varius sit dignissim justo. Dui sapien aliquet
+    aliquam quis et tellus velit bibendum. Quis pretium vitae suspendisse at.
+    Iaculis eu convallis egestas a mattis viverra. Id leo sollicitudin matti
+  </p>
+  <div className="folder_people">
+    <img src={People} alt="" />
+    <div className="folder_people_text">
+      <h2>Андрей Соломонов</h2>
+      <p>Developer</p>
+    </div>
+  </div>
+</div>; */
+}

@@ -1,14 +1,3 @@
-#info {
-  position: relative;
-}
-
-#info::before {
-  content: url("../../assets/Group1.png");
-  position: absolute;
-  bottom: -190px;
-  left: 10px;
-  z-index: -1;
-}
 .info {
   margin: 0px 0;
   padding: 100px 0 0;
@@ -17,6 +6,14 @@
   background-size: 507px;
   background-position-x: right;
   background-position-y: top;
+  position: relative;
+}
+.info::before {
+  content: url("../../assets/Group1.png");
+  position: absolute;
+  bottom: -190px;
+  left: -190px;
+  z-index: -1;
 }
 
 .info_card {
@@ -136,7 +133,7 @@
     font-size: 18px;
     margin-left: 50px;
   }
-  #info::before {
+  .info::before {
     content: none;
   }
 }

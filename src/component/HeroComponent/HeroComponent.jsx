@@ -1,14 +1,19 @@
 import React from "react";
 import Btn from "../../assets/btn-link.png";
 import "./hero.css";
-import AOS from "aos";
+import { motion } from "framer-motion";
 
 function HeroComponent() {
-  AOS.init();
   return (
     <div id="hero">
       <div className="container">
-        <div className="hero">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -200 }}
+          transition={{ duration: 0.9 }}
+          className="hero"
+        >
           <div className="hero_text">
             <h1>/ПОЛУЧИ</h1>
             <h2>
@@ -27,7 +32,7 @@ function HeroComponent() {
               aliquet in.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

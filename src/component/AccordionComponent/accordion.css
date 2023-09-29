@@ -5,20 +5,13 @@
   background-size: 85% 100%;
   padding: 250px 0 50px;
   margin: 0px 0 30px;
-  position: relative;
 }
 
-#accordion::before {
-  content: url("../../assets/Group2.png");
-  position: absolute;
-  bottom: -140px;
-  right: 20px;
-  z-index: -1;
-}
 .accordion_container {
   max-width: 1560px;
   padding: 0 20px;
   margin: 0 auto;
+  position: relative;
 }
 .accordion {
   width: 100%;
@@ -28,6 +21,14 @@
   box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.15);
   backdrop-filter: blur(11px);
   margin-bottom: 78px;
+}
+
+.accordion_container::before {
+  content: url("../../assets/Group2.png");
+  position: absolute;
+  bottom: -260px;
+  right: -160px;
+  z-index: -33;
 }
 
 .accordion h2 {
@@ -74,13 +75,13 @@
   font-weight: 400;
   line-height: 150%;
   border-radius: 0px 0px 40px 40px;
-  background: var(--White);
+  background-color: #fff;
   box-shadow: 0px 0px 15px 0px rgba(119, 119, 119, 0.1);
   padding: 30px;
   margin: 0 45px 0px 45px;
 }
 @media only screen and (max-width: 1440px) {
-  #accordion::before {
+  .accordion_container::before {
     content: none;
   }
 }

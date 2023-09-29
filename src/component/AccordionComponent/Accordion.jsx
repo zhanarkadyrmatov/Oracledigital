@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./accordion.css";
+import { useAnimate, motion, LayoutGroup } from "framer-motion";
+import { duration } from "@mui/material";
+import { Collapse } from "react-collapse";
+
 const items = [
   {
     id: 1,
@@ -37,6 +41,7 @@ const items = [
       "Congue nullam molestie sit consectetur commodo mi elit viverra in. Turpis porttitor eget in quis aliquam. Senectus non nisi odio curabitur nisl viverra odio. Sit nunc purus tortor sapien. Maecenas eget tellus massa consectetur. Etiam leo luctus etiam  vel. Vulputate varius elit nibh tortor id interdum interdum tellus.",
   },
 ];
+
 function Accordion() {
   const [openItemId, setOpenItemId] = useState(null);
 
@@ -47,6 +52,7 @@ function Accordion() {
       setOpenItemId(itemId);
     }
   };
+
   return (
     <div id="accordion">
       <div className="accordion_container">
@@ -59,8 +65,8 @@ function Accordion() {
           </p>
           <div className="accordion_wrapper">
             {items.map((item) => (
-              <div className="accordion_card" key={item.id}>
-                <div
+              <motion.div className="accordion_card" key={item.id}>
+                <motion.div
                   style={{
                     backgroundColor:
                       openItemId === item.id ? "#F0F0F0" : "#fff",
@@ -70,11 +76,11 @@ function Accordion() {
                 >
                   <p>{item.title}</p>
                   <p>{openItemId === item.id ? "-" : "+"}</p>
-                </div>
-                {openItemId === item.id && (
+                </motion.div>
+                <Collapse isOpened={openItemId == item.id}>
                   <p className="accor_text">{item.content}</p>
-                )}
-              </div>
+                </Collapse>
+              </motion.div>
             ))}
           </div>
         </div>

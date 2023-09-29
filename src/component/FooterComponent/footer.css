@@ -124,12 +124,23 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: 0.2s ease-in;
 }
+
+.footer_menu a:hover {
+  color: #3432f9;
+}
+
 .footer_phone {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-top: 70px;
+}
+
+.footer_phone a svg:hover {
+  transition: 0.2s ease-in;
+  transform: scale(1.5);
 }
 
 @media only screen and (max-width: 1440px) {

@@ -31,6 +31,10 @@
   padding: 0px 10px 0px 30px;
 }
 
+.hero_text h1 a:hover {
+  box-shadow: 5px 5px 10px 10px #000;
+}
+
 .hero_text h1 a img {
   padding: 26px 22px;
   background-color: var(--WHITE);
