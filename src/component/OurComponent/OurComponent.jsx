@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./our.css";
 import Pyhton from "../../assets/pyhton.png";
+import Javascript from "../../assets/javascript.png";
+import Flutter from "../../assets/flutter.png";
 import Btn from "../../assets/btn-link.png";
 import { motion } from "framer-motion";
 
@@ -8,13 +10,8 @@ const courses = [
   {
     id: 1,
     title: "Front-End",
+    img: Pyhton,
     groupInfo: "Групповое занятие, группы от 5 до 8 студентов.",
-    classInfo: [
-      { label: "Количество занятий:", value: "5 зан./нед., (Пн-Пт)" },
-      { label: "Форма обучения:", value: "Онлайн" },
-      { label: "Время занятия:", value: "120 минут" },
-      { label: "Длительность курса:", value: "16 недель" },
-    ],
     bonuses:
       "Предоставляем возможность повторить и закрепить любой урок из программы курса",
     price: "15 000с / в месяц",
@@ -23,13 +20,8 @@ const courses = [
   {
     id: 2,
     title: "Front-End",
+    img: Javascript,
     groupInfo: "Групповое занятие, группы от 5 до 8 студентов.",
-    classInfo: [
-      { label: "Количество занятий:", value: "5 зан./нед., (Пн-Пт)" },
-      { label: "Форма обучения:", value: "Онлайн" },
-      { label: "Время занятия:", value: "120 минут" },
-      { label: "Длительность курса:", value: "16 недель" },
-    ],
     bonuses:
       "Предоставляем возможность повторить и закрепить любой урок из программы курса",
     price: "15 000с / в месяц",
@@ -38,13 +30,8 @@ const courses = [
   {
     id: 3,
     title: "Front-End",
+    img: Flutter,
     groupInfo: "Групповое занятие, группы от 5 до 8 студентов.",
-    classInfo: [
-      { label: "Количество занятий:", value: "5 зан./нед., (Пн-Пт)" },
-      { label: "Форма обучения:", value: "Онлайн" },
-      { label: "Время занятия:", value: "120 минут" },
-      { label: "Длительность курса:", value: "16 недель" },
-    ],
     bonuses:
       "Предоставляем возможность повторить и закрепить любой урок из программы курса",
     price: "15 000с / в месяц",
@@ -58,16 +45,16 @@ function OurComponent() {
       <div className="container">
         <h2 className="title">Наши курсы</h2>
         <div data-aos="zoom-in-up" className="courses_wrapper">
-          {[1, 2, 3].map((e) => {
+          {courses.map((e) => {
             return (
-              <div key={e} className="courses_card">
+              <div key={e.id} className="courses_card">
                 <h2>
-                  Front-End <span>(HTML, CSS, JavaScript)</span>
+                  {e.title} <span>(HTML, CSS, JavaScript)</span>
                 </h2>
                 <div className="courses_image">
-                  <img src={Pyhton} alt="" />
+                  <img src={e.img} alt="" />
                 </div>
-                <h3>Групповое занятие, группы от 5 до 8 студентов.</h3>
+                <h3>{e.groupInfo}</h3>
                 <div className="courses_text">
                   <p>
                     <a>Количество зантий:</a>
@@ -89,12 +76,9 @@ function OurComponent() {
                   </p>
                 </div>
                 <h6>Бонусы:</h6>
-                <p>
-                  Предоставляем возможность повторить и закрепить любой урок из
-                  программы курса
-                </p>
+                <p>{e.bonuses}</p>
                 <h5>
-                  15 000с / в месяц <span>18 590</span>
+                  {e.price} <span>{e.discountedPrice}</span>
                 </h5>
                 <button>
                   Связаться с нами <img src={Btn} alt="" />

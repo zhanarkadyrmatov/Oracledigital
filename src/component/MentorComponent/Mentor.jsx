@@ -31,7 +31,7 @@ function Mentor() {
                 </button>
               </div>
             </div>
-            <div class="mentor_grid">
+            <div className="mentor_grid">
               <div
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-bottom"

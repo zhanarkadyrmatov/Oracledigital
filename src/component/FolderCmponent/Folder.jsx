@@ -105,27 +105,3 @@ function Folder() {
 }
 
 export default Folder;
-
-{
-  /* <div className="folder_slide">
-  <h4>
-    5.0 <Rating name="simple-controlled" value={5} />
-  </h4>
-  <p>
-    Eu facilisis duis pulvinar dui sapien vestibulum. Praesent sed ridiculus
-    iaculis eget egestas blandit euismod. Ligula senectus egestas cras risus
-    sodales commodo. Enim nec neque sodales quis sit massa posuere. Id eget
-    ultrices tempus sit id donec feugiat. Congue aliquet tristique egestas
-    dictum tincidunt ac. Odio varius sit dignissim justo. Dui sapien aliquet
-    aliquam quis et tellus velit bibendum. Quis pretium vitae suspendisse at.
-    Iaculis eu convallis egestas a mattis viverra. Id leo sollicitudin matti
-  </p>
-  <div className="folder_people">
-    <img src={People} alt="" />
-    <div className="folder_people_text">
-      <h2>Андрей Соломонов</h2>
-      <p>Developer</p>
-    </div>
-  </div>
-</div>; */
-}
