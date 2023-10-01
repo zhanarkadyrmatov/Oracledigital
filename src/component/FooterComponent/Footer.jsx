@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Btn from "../../assets/btn-link.png";
 import "./footer.css";
 import Logo from "../../assets/ORACLEDIGITAL.png";
+import { BsFillCheckCircleFill } from "react-icons/bs";
 function Footer() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -12,14 +13,13 @@ function Footer() {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (isValidEmail(email)) {
-      console.log({ email: email, message: message });
+    if (isValidEmail(email) && name.length > 3) {
+      console.log({ email: email, message: message, name: name });
       setEmail("");
       setMessage("");
+      setName("");
       setIsFormSubmitted(true);
       setTimeout(() => {
         setIsFormSubmitted(false);
@@ -51,18 +51,20 @@ function Footer() {
                   value={name}
                 />
                 <input
+                  type="text"
+                  id="GET-message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  type="message"
                   placeholder="Message*"
                 />
               </div>
               <div className="footer_input">
                 <input
                   className="footer_in_name"
-                  type="email*"
-                  placeholder="Email*"
+                  id="GET-email"
                   value={email}
+                  type="email"
+                  placeholder="Email*"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <button>
@@ -221,6 +223,11 @@ function Footer() {
           </div>
         </div>
       </div>
+      {isFormSubmitted ? (
+        <div className="alert">
+          <BsFillCheckCircleFill /> <span>отправлен</span>
+        </div>
+      ) : null}
     </div>
   );
 }

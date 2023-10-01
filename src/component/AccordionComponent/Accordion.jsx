@@ -65,8 +65,13 @@ function Accordion() {
           </p>
           <div className="accordion_wrapper">
             {items.map((item) => (
-              <motion.div className="accordion_card" key={item.id}>
-                <motion.div
+              <div
+                data-aos="fade-up"
+                data-aos-duration="3000"
+                className="accordion_card"
+                key={item.id}
+              >
+                <div
                   style={{
                     backgroundColor:
                       openItemId === item.id ? "#F0F0F0" : "#fff",
@@ -76,11 +81,11 @@ function Accordion() {
                 >
                   <p>{item.title}</p>
                   <p>{openItemId === item.id ? "-" : "+"}</p>
-                </motion.div>
+                </div>
                 <Collapse isOpened={openItemId == item.id}>
                   <p className="accor_text">{item.content}</p>
                 </Collapse>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

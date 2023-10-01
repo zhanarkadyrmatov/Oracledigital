@@ -135,6 +135,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 10px 0px 30px;
+  transition: 0.2s ease-in;
+}
+
+.courses_card button:hover {
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.15),
+    0 10px 10px -5px rgba(0, 0, 0, 0.15), 0 15px 15px -5px rgba(0, 0, 0, 0.15),
+    0 20px 20px -5px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
 
 .courses_card button img {

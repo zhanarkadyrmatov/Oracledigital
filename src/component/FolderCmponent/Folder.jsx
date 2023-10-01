@@ -5,7 +5,6 @@ import Next from "../../assets/next.png";
 import Prev from "../../assets/prev.png";
 import { Rating } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -17,9 +16,7 @@ function Slide() {
     <>
       <Swiper
         slidesPerView={1}
-        // pagination={{
-        //   clickable: true,
-        // }}
+        pagination={true}
         navigation={{
           prevEl: ".slider_prev",
           nextEl: ".slider_next",
@@ -27,6 +24,7 @@ function Slide() {
         breakpoints={{
           1024: {
             slidesPerView: 2,
+            pagination: true,
           },
         }}
         modules={[Pagination, Navigation]}
@@ -70,7 +68,11 @@ function Folder() {
   return (
     <div id="folder">
       <div className="container">
-        <div className="folder">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+          className="folder"
+        >
           <div className="folder_left">
             <h2>Что говорят наши студенты</h2>
             <div className="folder_left_text">

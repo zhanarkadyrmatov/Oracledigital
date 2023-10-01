@@ -57,7 +57,7 @@ function OurComponent() {
     <div className="courses">
       <div className="container">
         <h2 className="title">Наши курсы</h2>
-        <div className="courses_wrapper">
+        <div data-aos="zoom-in-up" className="courses_wrapper">
           {[1, 2, 3].map((e) => {
             return (
               <div key={e} className="courses_card">

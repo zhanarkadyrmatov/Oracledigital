@@ -6,7 +6,6 @@ import Info3 from "../../assets/info03.png";
 import Info4 from "../../assets/info5.png";
 import Info2 from "../../assets/info2.png";
 import "./info.css";
-import { motion } from "framer-motion";
 
 function Info() {
   return (
@@ -16,7 +15,12 @@ function Info() {
           <h2 className="title">
             Почему стоит задуматься о <br /> карьере в IT?
           </h2>
-          <motion.div className="info_card">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="info_card"
+          >
             <p>
               В IT-сфере очень много перспективных дорожек. От создания сайтов и
               программ до графического дизайна мобильных игр или приложений. Вам
@@ -35,8 +39,13 @@ function Info() {
                 <img className="info_number_img" src={InfoLogo} alt="" />
               </div>
             </div>
-          </motion.div>
-          <div className="info_card_dark">
+          </div>
+          <div
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="info_card_dark"
+          >
             <div className="info_img_dark">
               <div className="info_number_dark">
                 <div className="info_nomer_dark">
@@ -56,7 +65,12 @@ function Info() {
               для того, чтобы быть успешным
             </p>
           </div>
-          <div className="info_card">
+          <div
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="info_card"
+          >
             <p>
               В IT-сфере очень много перспективных дорожек. От создания сайтов и
               программ до графического дизайна мобильных игр или приложений. Вам
@@ -76,7 +90,12 @@ function Info() {
               </div>
             </div>
           </div>
-          <div className="info_card_dark">
+          <div
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+            className="info_card_dark"
+          >
             <div className="info_img_dark">
               <div className="info_number_dark">
                 <div className="info_nomer_dark">
